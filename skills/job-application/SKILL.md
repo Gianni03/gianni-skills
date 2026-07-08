@@ -26,6 +26,7 @@ If `assets/profile.md` does not exist, run the Setup flow first (see `assets/set
 - **Proficiency levels**: only "Working proficiency" skills go in CV Skills section. "Learning/In Progress" skills NEVER appear there. When in doubt, omit.
 - **No fabrication**: if the JD asks for a skill the user does not have, do not add it. Emphasize adjacent transferable skills.
 - **Personalization is mandatory**: every artifact references specifics from the JD, company, and user's achievements. No cliches ("passionate", "team player", "apasionado").
+- **No JD parroting**: never copy phrases from the JD into the CV. Use the user's own language to describe their experience. Keywords (technology names) belong in the Skills section. Sentences should sound like the person, not the job description.
 - **Anti-AI voice**: no em dashes. No long sentences chained with commas or semicolons. Short sentences. Direct. Natural rhythm. If a sentence has more than 2 commas, split it.
 - **Company research**: use `webfetch` on the company's About/Careers page when available. If webfetch fails, work from JD and flag the gap.
 - **Load the playbook** for the requested mode from `assets/playbooks.md` before generating.
