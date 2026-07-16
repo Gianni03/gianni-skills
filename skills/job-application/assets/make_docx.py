@@ -7,7 +7,7 @@ Usage:
 Handles:
   - # H1  -> centered name (16pt bold)
   - ## H2 -> section header (11pt bold, uppercase)
-  - ### H3 -> role/title line (9pt bold)
+  - ### H3 -> role/title line (10pt bold)
   - - bullet -> List Bullet style
   - **bold** inline formatting
   - [text](url) -> clickable hyperlinks (blue, underlined)
@@ -97,7 +97,7 @@ def md_to_docx(md_path: str, docx_path: str) -> None:
     # Compact font for 1-page fit
     style = doc.styles["Normal"]
     style.font.name = "Calibri"
-    style.font.size = Pt(9)
+    style.font.size = Pt(10)
     style.paragraph_format.space_after = Pt(0)
     style.paragraph_format.space_before = Pt(0)
 
@@ -134,7 +134,7 @@ def md_to_docx(md_path: str, docx_path: str) -> None:
             add_inline(p, text)
             for run in p.runs:
                 run.bold = True
-                run.font.size = Pt(9)
+                run.font.size = Pt(10)
 
         # Horizontal rule
         elif line.strip() in ("---", "***"):

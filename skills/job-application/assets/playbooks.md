@@ -62,14 +62,13 @@ Produce a resume adapted to the JD's keywords and emphasis, WITHOUT fabricating 
 - **No fabrication**: if the JD asks for a skill the user doesn't have, do not add it. Instead, emphasize adjacent transferable skills.
 - **Project inclusion threshold**: only include projects with a clear, specific connection to a JD requirement. If the connection is weak or generic ("it uses TypeScript"), omit the project. When in doubt, leave it out. A shorter, more relevant Projects section is better than a longer, padded one.
 - **Proficiency levels**: `assets/profile.md` classifies skills into three tiers: **Working proficiency** (list in CV Skills section), **Familiar/project-level** (mention only in project context), and **Learning/In Progress** (DO NOT list in CV Skills). Never inflate the CV. When in doubt, omit.
-- **Length**: keep to 1 page. Trim least-relevant projects/roles if needed.
-- **ATS symbol exclusion (MANDATORY)**: the CV text must NEVER contain `#`, `-`, `/`, `%`, `+`, `*`. The only accepted separator is `|`. These symbols break ATS parsing. Key replacements:
-  - "5+ years" -> "5 plus years"
-  - "100+" -> "more than 100"
+- **Length**: 1-2 pages allowed. If content exceeds 1 page, break by complete section — never let a single line or bullet spill onto the next page. Maintain visual balance between pages. A well-structured 2-page resume performs as well or better than a cramped 1-page one.
+- **Number formatting**: use numerals with symbols, never spell out quantities or percentages. Write "5+ years", "30%", "100+", "90%", "4 seconds", "20%". Do NOT write "5 plus years", "30 percent", or "more than 100".
+- **ATS symbol exclusion (MANDATORY)**: in text content, the CV must NEVER contain `#`, `-`, `/`, `*`. The only accepted separator is `|`. See `assets/ats-rules.md` for the full rules. Key replacements:
+  - `%` and `+` ARE ALLOWED with numbers: "5+ years", "30%", "100+", "90%"
   - "end-to-end" -> "end to end"
-  - "30%" -> "30 percent"
   - "UI/UX" -> "UI UX"
-  - "Aug 2025 - Present" -> "August 2025 Present" (full month names, space separator)
+  - "Aug 2025 - Present" -> "August 2025 Present" (full month names, space separator, NO dash)
   - Achievement lines: plain text, NO bullet characters in output
 
 ## File generation
@@ -79,7 +78,7 @@ Produce a resume adapted to the JD's keywords and emphasis, WITHOUT fabricating 
    `python3 assets/make_docx.py "<input.md>" "<output.docx>"`
 3. Convert to PDF (preserves hyperlinks):
    `libreoffice --headless --convert-to pdf "<output.docx>" --outdir output/`
-4. Verify 1-page: `pdfinfo "<output.pdf>" | grep Pages`
+4. Verify pages (1-2 allowed): `pdfinfo "<output.pdf>" | grep Pages`
 5. Report all three file paths (.md, .docx, .pdf).
 
 ## Markdown structure
@@ -120,10 +119,11 @@ Note: the `#`, `##`, `###`, and `-` are markdown structural markers for the conv
 - [ ] Bullets reordered by JD relevance within each role.
 - [ ] Contact line has clickable markdown links for email, portfolio, LinkedIn, GitHub.
 - [ ] Projects (if included) have clickable links.
-- [ ] No forbidden symbols in text content: no #, -, /, %, +, * (only | as separator).
+- [ ] No forbidden symbols in text content: no #, -, /, * in text. % and + ARE allowed with numbers (only | as separator).
+- [ ] Numerals with symbols used for quantities: "5+ years", "30%", not "5 plus years" or "30 percent".
 - [ ] Dates use full month names with space separator (August 2025 Present, not Aug 2025 - Present).
 - [ ] No bullet characters in docx/pdf output (plain text paragraphs).
-- [ ] 1 page max (verify with pdfinfo).
+- [ ] 1-2 pages max. If 2 pages, break by complete section — no lone bullets or lines on page 2 (verify with pdfinfo).
 - [ ] .md, .docx, and .pdf all created in output/.
 
 ## Interactive Mode
@@ -149,7 +149,7 @@ When the user requests interactive mode ("interactive", "paso a paso", "revisar"
 ### After all sections are reviewed and approved:
 - Assemble the final CV markdown from the approved sections.
 - Convert to .docx and .pdf.
-- Verify 1-page with pdfinfo.
+- Verify pages (1-2 allowed) with pdfinfo.
 - Report all file paths.
 
 ### Key rules:
