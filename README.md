@@ -7,6 +7,7 @@ Personal collection of AI agent skills. Compatible with OpenCode, Claude Code, G
 | Skill | What it does | Status |
 |---|---|---|
 | [job-application](skills/job-application/) | Generate personalized job application artifacts: adapted resumes (md+docx+pdf), cover letters, cold outreach, company research, why-this-company, salary reference | Active |
+| [interview-prep](skills/interview-prep/) | Interview preparation with three interactive modes: mood-aware personality strategy (Interviewology Four Styles), per-JD playbook (behavioral/cultural-fit/soft-skill focus), live mock interview with 5-focus-area scoring | Active |
 
 ## Install
 
