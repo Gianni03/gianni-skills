@@ -24,7 +24,7 @@ from pathlib import Path
 try:
     from docx import Document
     from docx.shared import Pt, Inches
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
     from docx.opc.constants import RELATIONSHIP_TYPE as RT
     from docx.oxml.shared import OxmlElement, qn
 except ImportError:
@@ -102,8 +102,15 @@ def md_to_docx(md_path: str, docx_path: str) -> None:
     style.paragraph_format.space_before = Pt(0)
 
     i = 0
+    pending_page_break = False
     while i < len(lines):
         line = lines[i].rstrip()
+
+        # Page break marker -> next paragraph starts on a new page
+        if line.strip() == "---page---":
+            pending_page_break = True
+            i += 1
+            continue
 
         # H1 - name (centered, large)
         if line.startswith("# ") and not line.startswith("## "):
@@ -121,6 +128,9 @@ def md_to_docx(md_path: str, docx_path: str) -> None:
             p = doc.add_paragraph()
             p.paragraph_format.space_before = Pt(5)
             p.paragraph_format.space_after = Pt(1)
+            if pending_page_break:
+                p.paragraph_format.page_break_before = True
+                pending_page_break = False
             run = p.add_run(text.upper())
             run.bold = True
             run.font.size = Pt(10)
@@ -131,6 +141,9 @@ def md_to_docx(md_path: str, docx_path: str) -> None:
             p = doc.add_paragraph()
             p.paragraph_format.space_before = Pt(3)
             p.paragraph_format.space_after = Pt(0)
+            if pending_page_break:
+                p.paragraph_format.page_break_before = True
+                pending_page_break = False
             add_inline(p, text)
             for run in p.runs:
                 run.bold = True
