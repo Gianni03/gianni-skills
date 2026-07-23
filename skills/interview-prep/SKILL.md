@@ -17,7 +17,7 @@ The user's declared mood matters — never skip the mood capture in `personality
 
 ## Hard Rules
 
-- **Behavioral, cultural-fit, and soft-skill focus only.** Do NOT do leetcode, algorithm, or system-design prep. If the user asks for algorithm prep, explain that is out of scope and suggest a separate skill.
+- **Behavioral, cultural-fit, and soft-skill focus only.** Do NOT do leetcode, algorithm, or system-design prep. If the user asks for algorithm prep, explain that is out of scope and suggest a separate skill. Avature's seniority-graded cultural rubric and trait-keyed question pool have been merged as a complementary lens to the 5 focus areas in `assets/mock-rubric.md` and `assets/question-bank.md` family G.
 - **Only Interviewology's Four Interview Styles** (Charmer / Challenger / Examiner / Harmonizer) is the personality system. Do NOT use DISC, MBTI, Big Five, or Enneagram. If the user asks for a different system, explain the corpus uses Interviewology and offer to add their source.
 - **Output language matches the JD language** (English JD → English output; Spanish JD → Spanish output; no JD → match the user's last message language; English fallback).
 - **All three modes are interactive**: ask clarifying questions; never silently produce a wall of text. Use the `question` tool when presenting explicit choices.
@@ -39,6 +39,7 @@ The user's declared mood matters — never skip the mood capture in `personality
 | User has run `job-application` in this session | Reuse `company-research` and `adapt-resume` outputs as playbook inputs |
 | Image-only assets needed | Defer: OCR was not run; ask the user to install `tesseract` and re-export, or skip |
 | Notion exports needed | Check `assets/external-links.md`; if the user has exported pages drop them under `assets/notion-exports/` |
+| User self-identifies Argentine / LATAM | Optionally apply `interview-ready.md` cultural-mindset overlay (e.g., American "ownership culture" expectation vs. Argentine compliance framing) in `personality-strategy` coaching |
 | Long methodology context | Stay in `assets/methodology.md`; do not paste full PDFs inline |
 | Behavioral question templates | Use `assets/question-bank.md`; descend into PDFs only for trap-question coaching |
 
@@ -101,12 +102,15 @@ skills/interview-prep/
 │   ├── question-bank.md             # Consolidated taxonomy — for playbook and mock-interview
 │   ├── mock-rubric.md               # Scorcard + drill mechanics — for mock-interview
 │   ├── external-links.md            # Notion links + image OCR status — pending ingestion
-│   └── pdfs/                        # Source corpus (5 PDFs; coding-interview.pdf excluded)
-│       ├── Interviewology_Anna_Papalia.pdf
-│       ├── metainterview.pdf
-│       ├── preguntas-entrevista-y-tips.pdf
-│       ├── preguntas y respuestas entrevista.pdf
-│       └── Frontend_Interview_Preparation_Handbook.pdf
+│   ├── pdfs/                        # Source corpus (5 PDFs; coding-interview.pdf excluded)
+│   │   ├── Interviewology_Anna_Papalia.pdf
+│   │   ├── metainterview.pdf
+│   │   ├── preguntas-entrevista-y-tips.pdf
+│   │   ├── preguntas y respuestas entrevista.pdf
+│   │   └── Frontend_Interview_Preparation_Handbook.pdf
+│   └── notion-exports/              # Notion page exports (content sources, read-only)
+│       ├── avature.md
+│       └── interview-ready.md
 └── output/                           # Generated artifacts at runtime — create if needed
     ├── playbook_<company-slug>.md
     └── mock-scorecard_<date>.md
@@ -119,4 +123,5 @@ skills/interview-prep/
 - `assets/question-bank.md` — behavioral/cultural-fit/soft-skill question taxonomy by family.
 - `assets/mock-rubric.md` — session flow + 5 focus areas scoring grid + trap question criteria + feedback mechanics.
 - `assets/external-links.md` — Notion links (private, pending export) and public references.
+- `assets/notion-exports/avature.md` — Notion export: internal company cultural rubric + behavioral question pool.
 - `assets/pdfs/` — the source corpus.

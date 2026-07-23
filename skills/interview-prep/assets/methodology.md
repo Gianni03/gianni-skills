@@ -101,6 +101,8 @@ Six behavioral/cultural-fit/soft-skill question families are catalogued in `asse
 
 Each family has English and Spanish entries. The `playbook` mode selects from these families based on the JD; the `mock-interview` mode drills from them sequentially.
 
+Complementary cut. The Avature corpus provides a trait-keyed bank grouping questions by assessed competency (Adaptability, Ownership, Listening, etc.) with explicit assessment cues. Use this second axis when a JD names a specific competency — pull from family G in `question-bank.md` rather than re-phrasing from A-F.
+
 ## 5. Trap / difficult questions (Spanish corpus)
 
 The *preguntas y respuestas entrevista.pdf* document defines two question archetypes that need specialized handling:
@@ -117,7 +119,11 @@ Each trap/difficult question has a paired "what NOT to do / what to do" coaching
 - **No salary negotiation.** That lives in the `job-application` skill's `salary-reference` mode. Don't duplicate.
 - **No body language / video etiquette / stress management.** The corpus has only passing mentions; this skill will not fabricate guidance in those areas.
 
-## 7. Sources
+## 7. Strong Yes lever
+
+A Strong Yes is a single interviewer who becomes a champion — they actively advocate for the candidate in the hiring committee. S-Tier companies often require at least one Strong Yes regardless of Soft-Yes votes. The leverage to convert a Yes into a Strong Yes is human connection (rapport, curiosity, fit perceived by the interviewer), not pure technical ability. Source: interview-ready.md. This reframes the goal of `personality-strategy` mode: connect as the archetype's 'best opening' suggests, not just land the answer cleanly.
+
+## 8. Sources
 
 - `assets/pdfs/Interviewology_Anna_Papalia.pdf` — primary personality source
 - `assets/pdfs/metainterview.pdf` — behavioral rubric + STAR confirmation
@@ -125,3 +131,5 @@ Each trap/difficult question has a paired "what NOT to do / what to do" coaching
 - `assets/pdfs/preguntas-entrevista-y-tips.pdf` — Spanish soft-skill + cultural-fit input
 - `assets/pdfs/Frontend_Interview_Preparation_Handbook.pdf` — elevator pitch + STAR anchor
 - *Cracking the Coding Interview* (McDowell) — S.A.R. + Nugget First + behavioral prep grid + "I not we" rule. Not shipped in repo (56MB, LOW relevance); technique attribution only.
+- `assets/notion-exports/avature.md` — internal company rubric (cultural skills + behavioral question pool only; technical rubric excluded as out-of-scope).
+- `assets/notion-exports/interview-ready.md` — personal playbook (Strong Yes lever, turn-around tactics, graded-answer gallery, storytelling DO/DON'Ts, canonical cultural sequence; salary/technical sections excluded as job-application or out-of-scope territory).

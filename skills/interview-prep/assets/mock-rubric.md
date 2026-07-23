@@ -28,6 +28,16 @@ Every drill answer is scored 0–3 against each of the 5 areas. Track across the
 | Driving results | No result; action without outcome. | Result stated but unquantified ("it worked"). | Result quantified (e.g. "cut 40% latency"). | Result quantified + tied to user's specific contribution ("I drove X, which caused Y"). |
 | Communicating effectively | Answer incoherent or extreme over-detail. | Coherent but too long/short; lacks structure. | Nuggets-first + STAR structurally followed. | Nuggets-first + STAR + tailored to the question + concise. |
 
+### Seniority overlay (optional debrief lens)
+
+Avature's internal rubric grades the same axis (Communication / Collaboration / Autonomy) across three seniority tiers — Mildly Strong, Strong, Very Strong. Use this overlay in FEEDBACK PROSE ONLY, not in the 0-3 numeric score. It helps the user understand "where on the ladder does my answer read?"
+
+| Axis | Mildly Strong | Strong | Very Strong |
+|---|---|---|---|
+| Communication | Clear and asks clarifying questions; struggles to avoid technical detail | Considers audience; organized answers; explains with good abstractions | Concise, example-rich; adapts to audience; synthesizes with simple words |
+| Collaboration | Seeks help when needed; open to collaboration | Proposes alternatives; actively communicates thoughts | Embraces diversity and disagreement; sees feedback as opportunity |
+| Autonomy | Needs guidance; tries independently before help; open to feedback | Knows when to escalate; resolves more independently | Escalates with solutions; proactive in improvements; manages time efficiently |
+
 ## Trap question scoring (additional criterion)
 
 Trap answers are scored on the 5 focus areas AND on a 6th dimension specific to traps:
@@ -58,6 +68,25 @@ If the answer skips the nugget or skips the result, that's an automatic -1 on "C
 
 The readiness verdict is final and uses the same language regardless of style; the coaching below it is personality-aware (use the style's advice-to-self line as the coaching voice).
 
+### 4-tier interviewer-verdict language
+
+| Average score across session | Interviewer-side verdict language (use in feedback prose) |
+|---|---|
+| 3.0 | Strong Yes — would actively champion you in the room |
+| 2.0–2.9 | Yes — would vote hire |
+| 1.0–1.9 | No — soft no, recoverable in a future round |
+| < 1.0 | Strong No — would actively advocate against |
+
+Phrase the final readiness verdict in this language alongside the numeric score. Strong Yes / Yes / No / Strong No is interviewer-side vocabulary that lands more clearly to the user than the rubric score.
+
 ## Output contract
 
 The `mock-interview` mode does NOT save a file by default — it's a live session. If the user asks for the session to be persisted, save the final scorecard to `output/mock-scorecard_<date>.md`. Reporting inline is the default.
+
+### Turn-around tactics (mid-round recovery)
+
+- Diagnose honestly mid-round — don't assume you're fine.
+- Reset scope: ask the interviewer "What's the best thing I can do from here?"
+- Abandon interpretation; pivot to a concrete demo/observation that shows your competence directly.
+- Recover post-rejection by sending a short follow-up with a demo or specific insight — not a re-pitch.
+- The lever is connection + demonstrated competence, not defensiveness. (Source: interview-ready.md)
