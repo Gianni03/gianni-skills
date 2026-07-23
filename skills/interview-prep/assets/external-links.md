@@ -4,19 +4,17 @@ Additional reference material the user has identified for the `interview-prep` s
 
 ## Notion (private — requires login)
 
-These links timed out during skill build. Export them as Markdown or PDF to `assets/pdfs/` (or `assets/notion-exports/`) and the skill will pick them up automatically.
-
 - **Avature interviews** — https://app.notion.com/p/gianni-03/Avature-interviews-11ff2b34444680659faac35202a1ccc6
-  - Status: Not yet ingested.
-  - How to ingest: open the page, use Notion's "Export → Markdown & CSV", drop the .md file into `assets/notion-exports/` with the same base name.
+  - Status: INGESTED. See `notion-exports/avature.md`.
 
 - **Interview Ready** — https://app.notion.com/p/gianni-03/Interview-Ready-2c9f2b3444468092adc5c3845169f111
-  - Status: Not yet ingested.
-  - How to ingest: same As above.
+  - Status: INGESTED. See `notion-exports/interview-ready.md`.
 
 - **Test de personalidad** — https://app.notion.com/p/gianni-03/Test-personalidad-04708f55d9f14c08807d636d666c11a9
-  - Status: Not yet ingested. Likely relevant to `personality-strategy` mode.
-  - How to ingest: same as above.
+  - Status: NOT INGESTED. The Notion page is just links to external personality-test sites (no original content). The two external sites it points to were checked 2026-07-23 and yielded NOTHING usable:
+    - 16personalities.com — login-walled; uses the NERIS framework (loosely Big Five-based), which is OUT OF SCOPE per the SKILL.md hard rule "Only Interviewology's Four Interview Styles". Do NOT ingest.
+    - secure.plum.io — login-walled SPA, no extractable content.
+  - Decision: skip permanently. The `personality-strategy` mode stays on Interviewology only.
 
 ## Public web pages (fetched, low-to-medium relevance for interview-prep)
 

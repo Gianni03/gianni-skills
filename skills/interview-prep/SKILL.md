@@ -51,8 +51,8 @@ The user's declared mood matters — never skip the mood capture in `personality
 
    **`personality-strategy` mode**:
    1. Walk the "Which line lands?" diagnostic from `assets/personality-cheatsheet.md`. If the user already declared a primary style (this session or carried from `job-application`), confirm it instead of re-asking.
-   2. Ask for today's mood via the `question` tool: motivated / eager / cautious / discouraged / defensive / neutral.
-   3. Map the mood to the overlay per the personality-cheatsheet mood table.
+   2. Ask for today's mood via the `question` tool: motivated / eager / cautious / discouraged / defensive / neutral. If the user answers in free-text instead of picking a label (e.g. "suelo responder con entusiasmo e inmediatamente bajarme el precio"), accept it — read it as a description of the user's felt state and map it to the closest neighbor-tendency overlay, then name the at-worst risk it triggers. The overlay is always derived from what the user actually said, never force a label.
+   3. Map the mood to the overlay per the personality-cheatsheet mood table. For free-text moods, combine the closest primary-neighbor overlay with the at-worst verb it triggers (e.g. "enthusiasm + self-doubt" → Charmer overlay triggering Harmonizer's "downplays").
    4. Generate the strategy document: primary style profile, today's overlay, best opening advice, two traps to watch for, two answer-structure reminders (Nugget First + STAR). Present inline.
    5. Ask whether to proceed to `playbook` or `mock-interview`.
 
