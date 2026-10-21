@@ -79,6 +79,35 @@ Include the obvious wrong languages, but also the wrong **job families**: sales
 engineers, support, QA, DevOps, and — on general job boards — the industrial meanings of
 your words. `programador cnc` is a real result on a real Argentine board.
 
+#### The `specialist` gate
+
+A specialist family should only count when the title also carries a core signal.
+Otherwise the family swallows roles from a different discipline:
+
+```json
+"roles": {
+  "specialist": ["ai engineer", "llm", "agentic", "ai developer"],
+  "specialist_requires": ["frontend", "product", "design", "web", "full stack"]
+}
+```
+
+With that gate:
+
+| Title | Result |
+|---|---|
+| AI-First **Frontend** Software Engineer | high |
+| **Frontend** Engineer – AI Developer Tools | high |
+| **Full Stack** and AI Automation Developer | high |
+| AI Engineer | medium |
+| AI Developer | medium |
+
+Without the gate, every one of those is `high`, and the report fills with roles whose
+core is model infrastructure rather than product work.
+
+This is also the honest answer to a common failure: a candidate asks for AI roles, then
+rejects the AI roles they get. The problem is not the category, it is that the category
+was never narrowed.
+
 ### 3. `seniority` — where you sit
 
 ```
@@ -227,9 +256,20 @@ verdict. Work in this order:
    are aspirational or your CV is not selling your level.
 3. **Fix the profile before adding rules.** Editing `roles` or `seniority` is
    deterministic and reversible. A learned rule is a statistical guess.
-4. **Then `feedback.py learn`.** Three or more rejections of the same word, zero
-   applications, becomes a demotion. It never deletes, so a mistake costs one row of
-   prominence, not a lost opportunity.
+4. **Then `feedback.py learn`, and read the rule before trusting it.** Three or more
+   rejections of the same word, zero applications, becomes a demotion. It never deletes,
+   so a mistake costs one row of prominence, not a lost opportunity.
+
+   **Watch for over-correction.** A real case: four rejections of "AI Engineer" produced
+   a rule demoting every title containing `ai`, which took out 23 postings — including
+   `AI-First Frontend Engineer` and `Full Stack and AI Automation Developer`, exactly the
+   roles the candidate wanted. One word was doing the work of a distinction it could not
+   represent.
+
+   When a learned rule removes things you wanted, the fix is almost always a **profile
+   gate**, not a higher `--min-signals`. Encode the distinction explicitly; statistics
+   from a small sample cannot invent it. After adding
+   `roles.specialist_requires`, the same rule became unnecessary and was deleted.
 5. **Re-read the reject list.** The most common miss is a job family you forgot: support
    engineer, solutions architect, technical writer. If a category keeps appearing in your
    rejects, add one fragment.

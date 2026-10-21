@@ -200,7 +200,15 @@ def classify(job):
     specialist = _cfg("roles.specialist", AI_BUILD_ROLE)
     medium_roles = _cfg("roles.medium", MEDIUM_ROLE)
 
-    if has_any(title, high_roles) or has_any(title, specialist):
+    # A specialist family only counts as a strong match when the title also
+    # carries a core signal. "AI-First Frontend Engineer" is a match;
+    # "AI Engineer" alone is a different discipline that keeps getting rejected.
+    specialist_requires = _cfg("roles.specialist_requires", [])
+    specialist_hit = has_any(title, specialist)
+    if specialist_hit and specialist_requires and not has_any(title, specialist_requires):
+        specialist_hit = False
+
+    if has_any(title, high_roles) or specialist_hit:
         # Angular-only roles are frontend-adjacent, not React work. Worth reading,
         # but they do not belong in the headline list.
         fit = "medium" if ("angular" in title and "react" not in title) else "high"

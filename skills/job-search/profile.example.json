@@ -29,6 +29,13 @@
       "vector database",
       "agentic",
       "prompt engineer"
+    ],
+    "specialist_requires": [
+      "data",
+      "analytics",
+      "backend",
+      "platform",
+      "pipeline"
     ]
   },
   "stack": {

@@ -60,8 +60,14 @@ def fold(value):
 
 
 def tokens(title):
+    """Words that identify a role family.
+
+    Two-letter tokens are kept on purpose: "AI" is the single most informative
+    signal in a modern job title, and a length filter silently discarded it.
+    STOPWORDS carries the noise that would otherwise come in.
+    """
     words = re.findall(r"[a-z0-9+#.]+", fold(title))
-    return {w for w in words if len(w) > 2 and w not in STOPWORDS}
+    return {w for w in words if len(w) >= 2 and w not in STOPWORDS}
 
 
 def load_feedback():
@@ -174,11 +180,13 @@ def cmd_learn(args):
             continue
         if applied_tokens.get(word):
             continue  # appears in something wanted: not a rejection signal
-        dominant = None
+        # The rule must carry the reason that actually dominated, not whichever
+        # reason happened to be seen first. A rule labelled with the wrong reason
+        # is worse than no rule: it is confidently misleading.
+        dominant, dominant_count = "other", 0
         for reason, counter in reason_tokens.items():
-            if counter.get(word):
-                dominant = reason
-                break
+            if counter.get(word, 0) > dominant_count:
+                dominant, dominant_count = reason, counter[word]
         demote.append({"pattern": word, "reason": dominant or "other",
                        "rejected": count, "applied": 0})
 
