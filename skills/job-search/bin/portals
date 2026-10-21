@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Multi-portal job search: getonbrd (LatAm), computrabajo (Argentina), remoteok (remote).
+set -euo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec bun run "$HERE/../portals/cli/cli.ts" "$@"

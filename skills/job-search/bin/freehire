@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Wrapper for the vendored freehire-search CLI.
+set -euo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec bun run "$HERE/../portals/freehire-search/cli/src/cli.ts" "$@"

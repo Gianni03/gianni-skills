@@ -1,0 +1,54 @@
+{
+  "roles": [
+    "frontend",
+    "ui developer",
+    "product engineer",
+    "design engineer",
+    "developer",
+    "programador",
+    "desarrollador",
+    "full stack",
+    "fullstack",
+    "ai engineer",
+    "ai developer",
+    "llm",
+    "agentic"
+  ],
+  "jobage": 7,
+  "limit": 30,
+  "searches": [
+    { "source": "computrabajo", "query": "desarrollador", "location": "Rosario" },
+    { "source": "computrabajo", "query": "react", "location": "Rosario" },
+    { "source": "computrabajo", "query": "full stack", "location": "Rosario" },
+    { "source": "computrabajo", "query": "inteligencia artificial", "location": "Rosario" },
+    { "source": "computrabajo", "query": "desarrollador", "location": "Cordoba" },
+    { "source": "computrabajo", "query": "react", "location": "Cordoba" },
+    { "source": "computrabajo", "query": "desarrollador", "location": "Santa Fe" },
+    { "source": "computrabajo", "query": "frontend", "location": "Capital Federal" },
+    { "source": "computrabajo", "query": "react", "location": "Capital Federal" },
+
+    { "source": "getonbrd", "query": "frontend" },
+    { "source": "getonbrd", "query": "react" },
+    { "source": "getonbrd", "query": "product engineer" },
+    { "source": "getonbrd", "query": "AI engineer" },
+
+    { "source": "remoteok", "query": "react" },
+    { "source": "remoteok", "query": "frontend" },
+
+    { "source": "telegram", "query": "react" },
+    { "source": "telegram", "query": "frontend" },
+    { "source": "telegram", "query": "remoto" },
+    { "source": "telegram", "query": "AI" },
+
+    { "source": "linkedin", "query": "frontend developer", "location": "Rosario, Santa Fe, Argentina" },
+    { "source": "linkedin", "query": "react developer", "location": "Rosario, Santa Fe, Argentina" },
+    { "source": "linkedin", "query": "react developer", "location": "Argentina" },
+    { "source": "linkedin", "query": "AI engineer", "location": "Argentina" },
+    { "source": "linkedin", "query": "frontend engineer", "location": "Buenos Aires, Argentina" },
+    { "source": "linkedin", "query": "product engineer", "location": "Argentina" },
+
+    { "source": "freehire", "query": "title:frontend engineer OR title:react developer OR title:frontend developer", "region": "latam" },
+    { "source": "freehire", "query": "title:product engineer OR title:ui developer OR title:design engineer", "region": "latam" },
+    { "source": "freehire", "query": "title:ai engineer OR title:llm OR title:ai developer", "region": "latam" }
+  ]
+}

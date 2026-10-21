@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "candidate": {
+    "name": "Alex Example",
+    "headline": "Data Engineer, 4 years, Python + SQL + Airflow"
+  },
+  "roles": {
+    "high": [
+      "data engineer",
+      "analytics engineer",
+      "etl developer",
+      "data platform engineer",
+      "bi engineer"
+    ],
+    "medium": [
+      "engineer",
+      "developer",
+      "entwickler",
+      "analyst",
+      "consultant",
+      "software engineer",
+      "backend"
+    ],
+    "specialist": [
+      "llm",
+      "rag",
+      "ai engineer",
+      "ml platform",
+      "vector database",
+      "agentic",
+      "prompt engineer"
+    ]
+  },
+  "stack": {
+    "reject": [
+      "frontend",
+      "front-end",
+      "react",
+      "angular",
+      "vue",
+      "css",
+      "html",
+      "mobile",
+      "android",
+      "ios",
+      "flutter",
+      "salesforce",
+      "sap",
+      "cobol",
+      "php",
+      "ruby",
+      "wordpress",
+      "qa ",
+      "tester",
+      "devops",
+      "sre ",
+      "sysadmin",
+      "soporte",
+      "support",
+      "vendedor",
+      "sales",
+      "vertrieb",
+      "marketing",
+      "recruiter",
+      "internship coordinator"
+    ],
+    "reject_unless": {
+      "backend": [
+        "data",
+        "pipeline",
+        "platform",
+        "etl"
+      ]
+    }
+  },
+  "seniority": {
+    "below": [
+      "junior",
+      "jr ",
+      " jr",
+      "trainee",
+      "werkstudent",
+      "praktikant",
+      "intern",
+      "internship",
+      "entry level",
+      "entry-level",
+      "graduate",
+      "new grad",
+      "working student"
+    ],
+    "above": [
+      "staff ",
+      "staff,",
+      "principal",
+      "architect",
+      "head of",
+      "director",
+      "vp ",
+      "vice president",
+      "distinguished",
+      "fellow",
+      "chief "
+    ]
+  },
+  "location": {
+    "home": [
+      "berlin",
+      "brandenburg",
+      "potsdam",
+      "germany",
+      "deutschland",
+      "remote germany",
+      "homeoffice"
+    ],
+    "region": [
+      "remote",
+      "eu",
+      "europe",
+      "netherlands",
+      "austria",
+      "switzerland",
+      "poland",
+      "czech",
+      "portugal",
+      "spain",
+      "ireland"
+    ],
+    "out_of_scope": [
+      "united states",
+      "usa",
+      "u.s.",
+      "canada",
+      "india",
+      "pakistan",
+      "brazil",
+      "mexico",
+      "argentina",
+      "china",
+      "japan",
+      "australia",
+      "singapore",
+      "philippines",
+      "nigeria",
+      "egypt"
+    ]
+  },
+  "search": {
+    "jobage": 7,
+    "limit": 30,
+    "role_gate": [
+      "data engineer",
+      "analytics engineer",
+      "etl",
+      "data platform",
+      "engineer",
+      "developer",
+      "entwickler",
+      "analyst",
+      "llm",
+      "ai engineer"
+    ],
+    "searches": [
+      {
+        "source": "linkedin",
+        "query": "data engineer",
+        "location": "Berlin, Germany"
+      },
+      {
+        "source": "linkedin",
+        "query": "analytics engineer",
+        "location": "Berlin, Germany"
+      },
+      {
+        "source": "linkedin",
+        "query": "data engineer",
+        "location": "Remote"
+      },
+      {
+        "source": "linkedin",
+        "query": "AI engineer",
+        "location": "Germany"
+      },
+      {
+        "source": "getonbrd",
+        "query": "data engineer"
+      },
+      {
+        "source": "getonbrd",
+        "query": "analytics engineer"
+      },
+      {
+        "source": "remoteok",
+        "query": "data engineer"
+      },
+      {
+        "source": "remoteok",
+        "query": "airflow"
+      },
+      {
+        "source": "freehire",
+        "query": "title:data engineer OR title:analytics engineer",
+        "region": "eu"
+      },
+      {
+        "source": "freehire",
+        "query": "title:llm OR title:ai engineer",
+        "region": "eu"
+      },
+      {
+        "source": "telegram",
+        "query": "data"
+      },
+      {
+        "source": "telegram",
+        "query": "remote"
+      }
+    ]
+  },
+  "blocked_domains": {
+    "jobleads.com": "Paywalled: applying requires a paid subscription.",
+    "whatjobs.com": "JobLeads partner aggregator; most listings redirect to their paywall."
+  },
+  "sources": {
+    "telegram": {
+      "stack_terms": [
+        "python",
+        "sql",
+        "airflow",
+        "dbt",
+        "spark",
+        "kafka",
+        "databricks",
+        "snowflake",
+        "etl",
+        "data",
+        "llm"
+      ],
+      "places": [
+        "Berlin",
+        "Potsdam",
+        "Germany",
+        "Deutschland",
+        "Remote",
+        "Europe",
+        "EU",
+        "Homeoffice"
+      ]
+    }
+  }
+}

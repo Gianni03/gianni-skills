@@ -8,6 +8,7 @@ Personal collection of AI agent skills. Compatible with OpenCode, Claude Code, G
 |---|---|---|
 | [job-application](skills/job-application/) | Generate personalized job application artifacts: adapted resumes (md+docx+pdf), cover letters, cold outreach, company research, why-this-company, salary reference | Active |
 | [interview-prep](skills/interview-prep/) | Interview preparation with three interactive modes: mood-aware personality strategy (Interviewology Four Styles), per-JD playbook (behavioral/cultural-fit/soft-skill focus), live mock interview with 5-focus-area scoring | Active |
+| [job-search](skills/job-search/) | Search live postings across LinkedIn, GetOnBoard, Computrabajo, RemoteOK, freehire, and public Telegram channels. Filters by location and recency, deduplicates across runs, scores against a configurable `profile.json`, and renders an interactive HTML report whose "applied" / "out of scope" marks train the next run | Active |
 
 ## Install
 
@@ -59,6 +60,28 @@ All modes that use standard tools (`pdftotext`, `python3`, `libreoffice`, `webfe
 | Profile auto-gen from PDFs | yes | yes | yes | yes | yes |
 
 Interactive mode works best in OpenCode because it uses the `question` tool for structured approval prompts. In other agents, the same flow works conversationally (the AI presents each section and asks for approval in chat).
+
+The `job-search` report is a self-contained HTML file: it opens anywhere, and its buttons
+fall back to `localStorage` plus a JSON export when the skill's optional local server is
+not running.
+
+## job-search setup
+
+`job-search` needs one personal file before its first run:
+
+```bash
+cd skills/job-search
+cp profile.example.json profile.json
+$EDITOR profile.json
+```
+
+`profile.json` decides which roles to search, which disciplines to reject, which
+seniorities to drop, and which locations count as home. It is gitignored — the skill
+itself contains no personal data.
+
+The full walkthrough, with three worked examples (frontend in Argentina, data engineer in
+Germany, remote designer) is in
+[job-search/assets/profile-guide.md](skills/job-search/assets/profile-guide.md).
 
 ## Skill Format
 

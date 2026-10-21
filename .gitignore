@@ -9,3 +9,8 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# job-search — personal data, never committed
+skills/job-search/profile.json
+skills/job-search/state/
+skills/job-search/ofertas/
